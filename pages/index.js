@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 export default function Home() {
 	return (
 		<div className='container'>
@@ -8,7 +7,7 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<main></main>
+			<main><h1>o</h1></main>
 		</div>
 	);
 }
