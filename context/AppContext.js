@@ -6,12 +6,12 @@ export class AppContextProvider extends Component {
 		products: [],
 	};
 	getProducts = () => {
-		getFetch("get/all/products").then((resp) => console.log(resp));
-	};
-	componentDidMount() {
 		getFetch("get/all/products").then((resp) => {
 			this.setState({ products: resp.productsDB });
 		});
+	};
+	componentDidMount() {
+		this.getProducts()
 	}
 	render() {
 		return (
