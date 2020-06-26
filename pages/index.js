@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import SideBar from "../components/SideBar";
 import LayoutContent from "../components/LayoutContent";
+import ListYT from "../components/ListYT";
 import { useState } from "react";
 export default function Home() {
 	const themeColor = "#c4302b";
@@ -18,7 +19,9 @@ export default function Home() {
 			<Header theme={themeColor} handleSideBar={handleSideBar}/>
 			<main>
 				<SideBar theme={themeColor} sideBarShow={sideBarShow}/>
-				<LayoutContent sideBarShow={sideBarShow}/>
+				<LayoutContent sideBarShow={sideBarShow}>
+					<ListYT theme={themeColor}/>
+				</LayoutContent>
 			</main>
 		</div>
 	);

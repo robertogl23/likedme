@@ -4,10 +4,22 @@ export const AppContext = createContext();
 export class AppContextProvider extends Component {
 	state = {
 		products: [],
+		productsYT:[],
+		productsFB:[],
+		productsI:[],
+		productsT:[],
+		productsTT:[],
 	};
 	getProducts = () => {
 		getFetch("get/all/products").then((resp) => {
-			this.setState({ products: resp.productsDB });
+			this.setState({
+				products: resp.productsDB,
+				productsYT: resp.productsDB.filter(e => e.type === 'Youtube'),
+				productsFB: resp.productsDB.filter(e => e.type === 'Facebook'),
+				productsI: resp.productsDB.filter(e => e.type === 'Instagram'),
+				productsT: resp.productsDB.filter(e => e.type === 'Twitter'),
+				productsTT: resp.productsDB.filter(e => e.type === 'Tik-Tok'),
+			});
 		});
 	};
 	componentDidMount() {

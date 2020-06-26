@@ -19,13 +19,10 @@ const Content = styled.div`
 		transform: transLateX(0px);
 	}
 `;
-export default function LayoutContent({sideBarShow}) {
+export default function LayoutContent({children, sideBarShow}) {
 	return (
 		<Content transition={sideBarShow}>
-            <div>
-
-			<h1>content</h1>
-            </div>
+            {children}
 		</Content>
 	);
 }
