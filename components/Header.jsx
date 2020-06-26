@@ -49,7 +49,7 @@ const Hamburge = styled.div`
 `;
 
 import Navegation from "./Navegation";
-export default function Header({ theme }) {
+export default function Header({ theme,handleSideBar }) {
 	return (
 		<HeaderLayout colorBG={theme}>
 			<TitleMobileLayout>
@@ -58,7 +58,7 @@ export default function Header({ theme }) {
 						<a>LikedMe</a>
 					</Link>
 				</TitleMobile>
-				<Hamburge>
+				<Hamburge onClick={() => handleSideBar()}>
 					<HamburgeSvg />
 				</Hamburge>
 			</TitleMobileLayout>

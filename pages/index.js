@@ -1,8 +1,12 @@
 import Head from "next/head";
 import Header from "../components/Header";
 import SideBar from "../components/SideBar";
+import LayoutContent from "../components/LayoutContent";
+import { useState } from "react";
 export default function Home() {
 	const themeColor = "#c4302b";
+	const [sideBarShow, setSideBarShow] = useState(false);
+	const handleSideBar = () => setSideBarShow(!sideBarShow);
 	return (
 		<div className='container'>
 			<Head>
@@ -11,9 +15,10 @@ export default function Home() {
 				<link rel='stylesheet' href='/style.css' />
 				<meta name='theme-color' content={themeColor} />
 			</Head>
-			<Header theme={themeColor} />
+			<Header theme={themeColor} handleSideBar={handleSideBar}/>
 			<main>
-				<SideBar  theme={themeColor}/>
+				<SideBar theme={themeColor} sideBarShow={sideBarShow}/>
+				<LayoutContent sideBarShow={sideBarShow}/>
 			</main>
 		</div>
 	);

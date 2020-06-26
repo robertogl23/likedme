@@ -12,10 +12,17 @@ const SideBarLayout = styled.div`
     width: 16.6667rem;
     box-sizing: border-box;
     background:${props => props.colorBG};
+    ${(props) =>
+		props.transition && "transform: translateZ(-16.6667rem) !important"};
+    transform: translateZ(0px);
+    transition: transform 150ms ease-out 0s;
+    @media (max-width: 967px) {
+		transform: translateX(-16.6667rem);
+	}
 `;
-export default function SideBar({theme}) {
+export default function SideBar({theme,sideBarShow}) {
 	return (
-		<SideBarLayout colorBG={theme}>
+		<SideBarLayout colorBG={theme} transition={sideBarShow}>
 			<h1>sidebar</h1>
 		</SideBarLayout>
 	);
