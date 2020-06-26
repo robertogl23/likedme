@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 const Content = styled.div`
-	border: 1px solid blue;
     align-items: center;
     display: flex;
     justify-content: center;

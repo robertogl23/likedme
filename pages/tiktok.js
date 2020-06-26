@@ -3,10 +3,13 @@ import Header from "../components/Header";
 import SideBar from "../components/SideBar";
 import LayoutContent from "../components/LayoutContent";
 import ListTT from "../components/ListTT";
+import SelectedProduct from "../components/SelectedProduct";
 import { useState } from "react";
 export default function Tiktok() {
 	const themeColor = "#000";
 	const [sideBarShow, setSideBarShow] = useState(false);
+	const [selectProduct, setSelectProduct] = useState(false);
+	const handleSelect = (p) => setSelectProduct(p);
 	const handleSideBar = () => setSideBarShow(!sideBarShow);
 	return (
 		<div className='container'>
@@ -18,9 +21,21 @@ export default function Tiktok() {
 			</Head>
 			<Header theme={themeColor} handleSideBar={handleSideBar}/>
 			<main>
-				<SideBar theme={themeColor} sideBarShow={sideBarShow} />
+			<SideBar
+					theme={themeColor}
+					sideBarShow={sideBarShow}
+					type={"Tik-Tok"}
+					handleSelect={handleSelect}
+				/>
 				<LayoutContent sideBarShow={sideBarShow}>
-					<ListTT theme={themeColor} />
+					{selectProduct ? (
+						<SelectedProduct
+							product={selectProduct}
+							handleSelect={handleSelect}
+						/>
+					) : (
+						<ListTT theme={themeColor} handleSelect={handleSelect}/>
+					)}
 				</LayoutContent>
 			</main>
 		</div>

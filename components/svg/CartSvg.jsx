@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from "styled-components";
 const SvgCart = styled.svg`
-    width:40px;
+width:33px;
+color:#fff;
 `
 export default function CartSvg() {
     return (

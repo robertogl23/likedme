@@ -3,7 +3,6 @@ import Link from "next/link";
 import TitleLikedMed from "./TitleLikedMed";
 import styled from "styled-components";
 const Nav = styled.nav`
-	border: 1px solid black;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
@@ -18,7 +17,7 @@ const ItemNav = styled.a`
 const MobileNav = styled.div`
 	display: none;
 	@media (max-width: 967px) {
-		border: 1px solid red;
+		
 		display: flex;
 		justify-content: center;
 		align-items: center;

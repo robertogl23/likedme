@@ -2,7 +2,8 @@ import React from 'react'
 import styled from "styled-components";
 
 const SvgHamburge= styled.svg`
-    width:40px;
+    width:28px;
+    color:#fff;
 `
 export default function HamburgeSvg() {
     return (

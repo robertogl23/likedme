@@ -2,11 +2,11 @@ import Head from "next/head";
 import Header from "../components/Header";
 import SideBar from "../components/SideBar";
 import LayoutContent from "../components/LayoutContent";
-import ListYT from "../components/ListYT";
-import SelectedProduct from "../components/SelectedProduct";
+import LayoutCart from "../components/LayoutCart";
+
 import { useState } from "react";
-export default function Home() {
-	const themeColor = "#c4302b";
+export default function Carrito() {
+	const themeColor = "#002";
 	const [sideBarShow, setSideBarShow] = useState(false);
 	const [selectProduct, setSelectProduct] = useState(false);
 	const handleSelect = (p) => setSelectProduct(p);
@@ -14,7 +14,7 @@ export default function Home() {
 	return (
 		<div className='container'>
 			<Head>
-				<title>LikedMe</title>
+				<title>LikedMe Carrito</title>
 				<link rel='icon' href='/favicon.ico' />
 				<link rel='stylesheet' href='/style.css' />
 				<meta name='theme-color' content={themeColor} />
@@ -28,11 +28,7 @@ export default function Home() {
 					handleSelect={handleSelect}
 				/>
 				<LayoutContent sideBarShow={sideBarShow}>
-					{selectProduct ? (
-						<SelectedProduct product={selectProduct} handleSelect={handleSelect}/>
-					) : (
-						<ListYT theme={themeColor} handleSelect={handleSelect}/>
-					)}
+					<LayoutCart/>
 				</LayoutContent>
 			</main>
 		</div>

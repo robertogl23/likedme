@@ -32,9 +32,14 @@ const Help = styled.a`
 	}
 `;
 const TitleMobile = styled.div`
+	color:#fff;
 	@media (max-width: 967px) {
 		display: none;
 	}
+`;
+const Title = styled.div`
+	color:#fff;
+	font-size:26px;
 `;
 const TitleMobileLayout = styled.div`
 	display: flex;
@@ -55,7 +60,7 @@ export default function Header({ theme,handleSideBar }) {
 			<TitleMobileLayout>
 				<TitleMobile>
 					<Link href='/'>
-						<a>LikedMe</a>
+						<Title>LikedMe</Title>
 					</Link>
 				</TitleMobile>
 				<Hamburge onClick={() => handleSideBar()}>

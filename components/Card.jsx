@@ -14,6 +14,7 @@ const CardLayout = styled.div`
 const IconLayoutCard = styled.div`
 	display: flex;
 	justify-content: center;
+	cursor:pointer;
 `;
 const BodyLayaoutCard = styled.div`
 	display: flex;
@@ -35,11 +36,11 @@ const PriceDisplay = styled.p`
 	font-size: 18px;
 	color: #fff;
 `;
-export default function Card({ product, theme }) {
+export default function Card({ product, theme ,handleSelect}) {
 	console.log(product);
 	return (
 		<CardLayout theme={theme}>
-			<IconLayoutCard>
+			<IconLayoutCard onClick={() => handleSelect(product)}>
 				<IconProduct type={product.type} />
 			</IconLayoutCard>
 			<BodyLayaoutCard>
@@ -53,7 +54,7 @@ export default function Card({ product, theme }) {
 					<PriceDisplay>{product.price} USD</PriceDisplay>
 				</div>
 				<div>
-					<ButtonAddCart />
+					<ButtonAddCart product={product}/>
 				</div>
 				<div>
 					<ButtonBuyNow />

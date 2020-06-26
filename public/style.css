@@ -5,6 +5,10 @@
 body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+    overflow-y: hidden;
+}
+main{
+    overflow-y: auto;
 }
 button,
 details,
@@ -13,4 +17,40 @@ input[type="reset"] {
 	background: none;
 
 	outline: inherit;
+}
+details details[open] ul {
+	display: inline-block;
+	left: 100%;
+	margin-top: -2rem;
+	border-left: 3px solid #335;
+	padding-left: 0.5rem;
+}
+ul details[open] > summary {
+    border-bottom: 3px solid #335;
+}
+summary:focus {
+    outline: none;
+    outline-color: none;
+    outline-style: none;
+    outline-width: none;
+}
+summary{
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+    cursor: pointer;
+}
+li{
+    color: #fff;
+    padding: 4px;
+}
+li:hover  {
+    background-color: rgba(255, 255, 255, 0.137);
+    cursor: pointer;
+}
+@media (max-width: 967px) {
+    
+    details{
+        display: none;
+    }
 }

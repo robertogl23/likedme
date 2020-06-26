@@ -1,23 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 const YoutubeIcon = styled.svg`
-    width:140px;
+    width:100%;
     color: #c4302b;
 `
 const FacebookIcon = styled.svg`
-    width:140px;
+    width:100%;
     color: #3b5998;
 `
 const InstagramIcon = styled.svg`
-    width:140px;
+    width:100%;
     color: #833AB4;
 `
 const TwitterIcon = styled.svg`
-    width:140px;
+    width:100%;
     color: #00acee;
 `
 const TikTokIcon = styled.svg`
-    width:140px;
+    width: 95px;
     color: #000;
 `
 export default function IconProduct({type}) {
