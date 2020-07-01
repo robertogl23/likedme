@@ -26,18 +26,18 @@ export default function Home() {
 					handleSelect={handleSelect}
 				/>
 				<LayoutContent sideBarShow={sideBarShow}>
-                    <div style={{displa:'flex',marginTop:20}}>
-                        <div>
+                    <div style={{displa:'flex',marginTop:120,width:500,padding:8} }>
+                        <div style={{textAlign:'center'}}>
                             <h1>¿Que es LikedMe?</h1>
                         </div>
                         <br/>
                         <div>
                             <h2>Español</h2>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/AdZqEGO9dNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/AdZqEGO9dNg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div>
                             <h2>Ingles</h2>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WMOlPHpv-30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/WMOlPHpv-30" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
 
                     </div>
