@@ -12,7 +12,7 @@ export default function Home() {
 	return (
 		<div className='container'>
 			<Head>
-				<title>LikedMe</title>
+				<title>LikedMe Ayuda</title>
 				<link rel='icon' href='/favicon.ico' />
 				<link rel='stylesheet' href='/style.css' />
 				<meta name='theme-color' content={themeColor} />
@@ -26,7 +26,7 @@ export default function Home() {
 					handleSelect={handleSelect}
 				/>
 				<LayoutContent sideBarShow={sideBarShow}>
-                    <div style={{displa:'flex'}}>
+                    <div style={{displa:'flex',marginTop:20}}>
                         <div>
                             <h1>¿Que es LikedMe?</h1>
                         </div>
