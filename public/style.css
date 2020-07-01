@@ -10,6 +10,9 @@ body{
 main{
     overflow-y: auto;
 }
+a{
+    cursor: pointer;
+}
 button,
 details,
 input[type="submit"],
